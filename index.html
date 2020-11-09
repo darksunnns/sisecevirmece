@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A Multiplayer Game</title>
+    <style>
+      html,
+      body {
+        background: #1877f2;
+        font-family: Arial;
+      }
+      canvas {
+        display: block;
+        background: #fff;
+        margin: 0 auto;
+      }
+      textarea {
+        display: block;
+        margin: 0 auto;
+        font-size: 20px;
+        background: cornflowerblue;
+        color: black;
+        width: 500px;
+        height: 50px;
+      }
+      .mystyle {
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px #ccc;
+        padding: 20px;
+        font-size: 20px;
+        background: cornflowerblue;
+        color: white;
+        width: 500px;
+      }
+      .gamepage {
+        display: block;
+      }
+      .firstpage {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    
+      }
+
+      h3,
+      h4 {
+        text-align: center;
+        margin: 0 0 0.5rem;
+        font-size: 3rem;
+      }
+
+      h4 {
+        margin-bottom: 2rem;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .field {
+        display: block;
+        padding: 0.5rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .joinbutton {
+        display: block;
+        padding: 1rem;
+        background: orange;
+        font-size: 2rem;
+        border: 1px solid darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="firstpage">
+      <h3>trust or action</h3>
+      <h4>sise cevirmece</h4>
+      <div class=title>Write name</div>
+      <input maxlength=7 class=field>
+      <input type=text disabled class=field value=7GHGS0>
+      <div class=title>Write friend code</div>
+      <input maxlength=7 class=field>
+      <button class=joinbutton>Join room</button>
+    </div>
+    <div class="gamepage">
+      <canvas
+        id="canvas"
+        width="500"
+        height="500"
+        style="border: 2px solid black;"
+        >
+      </canvas>
+      <textarea id="sorualani"></textarea>
+      <div class="mystyle"></div>
+    </div>
+    <script src="/static/kurucu.js"></script>
+    <script src="/static/yazikurucu.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/static/game.js"></script>
+  </body>
+</html>
